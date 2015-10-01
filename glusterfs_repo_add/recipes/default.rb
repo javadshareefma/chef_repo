@@ -21,12 +21,17 @@ yum_package 'nginx' do
   flush_cache [ :before ]
 end
 
+yum_package 'php' do
+  action :install
+  flush_cache [ :before ]
+end
+
 yum_package 'php-fpm' do
   action :install
   flush_cache [ :before ]
 end
 
-yum_package 'php' do
+yum_package 'php-mysql' do
   action :install
   flush_cache [ :before ]
 end
