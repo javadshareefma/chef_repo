@@ -1,0 +1,12 @@
+cookbook_file "/etc/nginx/nginx.conf" do
+  source "nginx.conf"
+  action :create
+end
+
+service "nginx" do
+  action :start
+end
+
+service "php-fpm" do
+  action :start
+end
